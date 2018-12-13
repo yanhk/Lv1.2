@@ -11,7 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-   // return view('welcome');
-	echo '测试数据';
-});
+//Route::get('/', function () {
+//   // return view('welcome');
+//	echo '测试数据';
+//});
+Route::get('/', 'StaticPagesController@home')->name('home');
+Route::get('/help', 'StaticPagesController@help')->name('help');
+Route::get('/about', 'StaticPagesController@about')->name('about');
